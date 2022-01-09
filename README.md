@@ -17,8 +17,8 @@ We hope all of you have a great time learning this quarter! Feel free to reach o
 - Session 3: State and Bindings
 - Session 4: Advanced Views
 - Session 5: Data and Networking
-- Session 6: Guest Speaker
-- Session 7: Guest Speaker
+- Session 6: Guest Speaker + Work Session
+- Session 7: Guest Speaker + Work Session
 - Session 8: Project Showcase
 
 ## Essential Links
@@ -32,4 +32,5 @@ We hope all of you have a great time learning this quarter! Feel free to reach o
 ### Swift
 - [A Guided Tour of Swift](https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html)
 - [Swift for Complete Beginners](https://www.hackingwithswift.com/read/0/overview)
+- [iOS and SwiftUI for Beginners](https://www.raywenderlich.com/ios/paths/learn)
 - [Official Apple Documentation](https://www.swift.org/)
