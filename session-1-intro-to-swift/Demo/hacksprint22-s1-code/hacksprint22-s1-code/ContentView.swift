@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("French Toast")
+            Text("I LOVE French Toast!")
                 .bold()
             Text("I")
             HStack {
