@@ -9,7 +9,7 @@
 ## Resources
 
 - [Slides](http://links.uclaacm.com/hacksprint22-s1-slides)
-- Workshop Recording (Coming Soon!)
+- [Workshop Recording](https://youtu.be/swXXKGc5A58)
 
 ## What we'll be learning today
 - [What is Swift?](#what-is-swift)
