@@ -30,7 +30,7 @@ We hope all of you have a great time learning this quarter! Feel free to reach o
 ## Additional Learning
 
 ### Swift
-- [A Guided Tour of Swift](https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html)
+- [A Guided Tour of Swift (for more experienced programmers)](https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html)
 - [Swift for Complete Beginners](https://www.hackingwithswift.com/read/0/overview)
 - [iOS and SwiftUI for Beginners](https://www.raywenderlich.com/ios/paths/learn)
 - [Official Apple Documentation](https://www.swift.org/)
