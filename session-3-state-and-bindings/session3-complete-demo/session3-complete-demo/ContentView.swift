@@ -9,8 +9,60 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Color("BackgroundColor")
+                .ignoresSafeArea()
+                .overlay(
+                    VStack{
+                        
+                        HStack{
+                            Image(systemName: "arrow.counterclockwise")
+                                .imageScale(.large)
+                                .padding()
+                                .background(Circle().fill(Color.white))
+                                .overlay(
+                                    Circle()
+                                        .strokeBorder(Color("TamColor"), lineWidth: 3)
+                                        .frame(width: 55, height: 55)
+                                )
+
+                            Spacer()
+                        }
+                        .padding(.horizontal)
+                        
+                        Spacer()
+                        
+                        Text("KEEP THE TAMAGOTCHI ALIVE!")
+                            .tracking(2)
+                            .font(.headline)
+                            .lineSpacing(22)
+                            .padding()
+                        
+                        Image("HappyTam")
+                        
+                        Text("Health")
+                            .padding([.top, .leading, .trailing])
+                        
+                        ProgressView(value: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/)
+                            .padding([.leading, .trailing], 50.0)
+                            .padding(.bottom)
+                            .accentColor(Color("TamColor"))
+                        
+                        Button{
+                            //action
+                        }label: {
+                            Text("FEED")
+                                .font(.title3)
+                                .bold()
+                                .tracking(2)
+                                .foregroundColor(Color.white)
+                        }
+                        .padding()
+                        .background(Color("TamColor"))
+                        .cornerRadius(15.0)
+                        
+                        Spacer()
+                    }
+                )
     }
 }
 
