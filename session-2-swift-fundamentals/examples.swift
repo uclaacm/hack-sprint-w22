@@ -19,6 +19,7 @@ print(name)
 
 var name : String = "Nareh"
 var age : Int = 420
+var gpa : Double = 4.20
 var isGamer : Bool = true
 
 let x : Int = 8
@@ -38,6 +39,10 @@ print(age != 420) // false
 print (age > 20) // true
 print( age < 500) // true
 
+print(true && false) // false
+print(!false) // true
+print(false || true) // true
+print(true && (false || !true)) // false
 
 
 var numbers : Array<Int> = [1, 2, 3, 4]
@@ -82,7 +87,11 @@ if age >= 21 {
   print("can drink")
 } else if age == 20 {
   print("can drink in Japan, not in the US")
-} else {
+} else if age == 19 {
+  print("can drink in South Korea")
+} else if age == 18 {
+  print("can drink in Hong Kong")
+} else  {
   print("cannot drink")
 }
 
@@ -112,70 +121,184 @@ while countdown > 0 {
   countdown -= 1
 }
 
+print("I like the character Choi Ung the most")
+print("I like the character Kook Yeon Su the most")
+print("I like the character Kim Ji Ung the most")
+print("I like the character NJ the most")
+print("I like the character Ga Eun Ho the most")
+
+print("My favorite character is Choi Ung")
+print("My favorite character is Kook Yeon Su")
+print("My favorite character is Kim Ji Ung")
+print("My favorite character is NJ")
+print("My favorite character is Ga Eun Ho")
+
+
+
 func addOne(num : Int) -> Int {
   return num + 1
 }
 let four : Int = addOne(num : 3)
 print(four)
 
-func printFavChar(char: String, age: Int){
-  print("My favorite character is \(char)")
+func printFavorite(name: String, age: Int){
+  print("My favorite character is \(name)")
   print("Who is \(age) years old")
 }
-printFavChar(char: "Choi Ung", age: 18)
+printFavorite(name: "Choi Ung", age: 18)
+printFavorite(name: "Kook Yeon Su", age: 18)
 
-func printFavChar(name char : String, age : Int) {
-  print("My favorite character is \(char)")
+func printFavorite(character name: String, age: Int){
+  print("My favorite character is \(name)")
   print("Who is \(age) years old")
 }
-printFavChar(name : "Choi Ung", age : 18)
+printFavorite(character: "Choi Ung", age: 18) // Much more readable!
 
-func printFavChar(_ char : String,_ age : Int) {
-  print("My favorite character is \(char)")
+func printFavorite(_ name: String,_ age: Int){
+  print("My favorite character is \(name)")
   print("Who is \(age) years old")
 }
-printFavChar("Choi Ung", 18)
 
+printFavorite("Choi Ung", 18) 
+// A little more familiar with people who've coded in other languages
+
+func findHighestCommonFactor(for num1: Int, and num2: Int) -> Int {
+  return 1
+}
+
+findHighestCommonFactor(for: 18, and: 36)
 
 var optionalInt : Int? = nil
 optionalInt = 2
 
-// A score of -1 means that the student didn't take the exam
-func getGrade(score : Int) -> String? {
-  if score == -1 {
-    return nil
+// Method 1 of unwrapping optionals: unwrapping
+func getGrade(score : Int?) -> String {
+  if let unwrappedScore = score {
+    if unwrappedScore >= 90 {
+      return "A"
+    } else if unwrappedScore >= 80 {
+      return "B"
+    } else if unwrappedScore >= 70 {
+      return "C"
+    } else if unwrappedScore >= 60 {
+      return "D"
+    } else {
+      return "F"
+    }
+  } else {
+    return "NG" // No Grade 
   }
+}
 
-  if score >= 90 {
+// Method 2 of unwrapping optionals: default value
+func getGrade(score : Int?) -> String {
+  let unwrappedScore: Int = score ?? -1
+  if score == -1 {
+    return "NG"
+  }
+  if unwrappedScore >= 90 {
     return "A"
-  } else if score >= 80 {
+  } else if unwrappedScore >= 80 {
     return "B"
-  } else if score >= 70 {
+  } else if unwrappedScore >= 70 {
     return "C"
-  } else if score >= 60 {
+  } else if unwrappedScore >= 60 {
     return "D"
   } else {
     return "F"
   }
 }
-// Method 1 of unwrapping optionals: unwrapping
-let grade : String? = getGrade(score : -1)
-if let unwrappedgrade = grade {
-  print("Your grade is \(unwrappedgrade)")
-} else {
-  print("You don't have a grade")
-}
-
-// Method 2 of unwrapping optionals: providing default value
-let grade : String = getGrade(score : -1) ?? "No grade"
-print("Your grade is \(grade)")
 
 // Method 3 of unwrapping optionals: forceful unwrapping
-let grade : String? = getGrade(score : -1)
-if grade == nil {
-  print("You don't have a grade")
-} else {
-  print("Your grade is \(grade!)")
+func getGrade(score : Int?) -> String {
+  if score == nil {
+    return "NG"
+  } else {
+    let unwrappedScore: Int = score!
+    if unwrappedScore >= 90 {
+      return "A"
+    } else if unwrappedScore >= 80 {
+      return "B"
+    } else if unwrappedScore >= 70 {
+      return "C"
+    } else if unwrappedScore >= 60 {
+      return "D"
+    } else {
+      return "F"
+    }
+  }
 }
 
-// go back to dictionary example
+
+var choiUngName : String = "Choi Ung"
+var choiUngAge : Int = 18
+var choiUngOccupation : String = "Artist"
+var choiUngCountry : String = "South Korea"
+
+var eugeneName : String = "Eugene Lo"
+var eugeneAge : Int = 21
+var eugeneOccupation : String = "Student"
+var eugeneCountry : String = "US"
+
+
+// Check if this person is of legal drinking age
+func isLegal(age : Int, from country : String) -> Bool {
+  if country == "South Korea"{
+    if age >= 19 {
+      return true
+    } else {
+      return false
+    }
+  }
+  else if country == "US" {
+    if age >= 21 {
+      return true
+    } else {
+      return false
+    }  
+  } // check for other countries
+  return true
+}
+
+print(isLegal(age: eugeneAge, from: eugeneCountry))
+print(isLegal(age: choiUngAge, from: choiUngCountry))
+
+struct Person {
+  var name : String
+  var age : Int
+  var occupation : String
+  var country : String
+
+  func introduce() {
+    print("Hello, my name is \(name)")
+  }
+}
+
+var choiUng : Person = Person(name: "Choi Ung", age: 18, occupation: "Artist", country: "South Korea")
+
+var eugene : Person = Person(name: "Eugene Lo", age: 21, occupation: "Student", country: "US")
+
+// Check if this person is of legal drinking age
+func isLegal(person: Person) -> Bool {
+  if person.country == "South Korea"{
+    if person.age >= 19 {
+      return true
+    } else {
+      return false
+    }
+  }
+  else if person.country == "US" {
+    if person.age >= 21 {
+      return true
+    } else {
+      return false
+    }  
+  } // check for other countries
+  return true
+}
+
+print(isLegal(person: eugene))
+print(isLegal(person: choiUng))
+
+choiUng.introduce()
+
