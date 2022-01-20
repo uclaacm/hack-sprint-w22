@@ -12,20 +12,17 @@
 - Workshop recording coming soon
 
 ## What we'll be learning today
-<!-- - [What is Swift?](#what-is-swift)
-  - [History and Introduction](#history-and-introduction)
-  - [SwiftUI vs UIKit](#swiftui-vs-uikit)
-- [Intro to Xcode](#intro-to-xcode)
-- [Views](#views)
-- [View Modifiers](#view-modifiers) -->
-- [Views and View Modifiers] (#view-and-view-modifiers)
-  - [Review Views] (#review-views)
-  - [New Views] (#new-views)
-  - [View Modifiers] (#view-modifiers)
-- [State and Bindings] (#state-and-bindings)
-  - [State] (#state)
-  - [Bindings] (#bindings)
-  - [Button and Actions] (#button-and-actions)
+- [Views and View Modifiers](#views-and-view-modifiers)
+  - [Review Views](#review-views)
+  - [New Views](#new-views)
+  - [Text View Modifiers](#text-view-modifiers)
+  - [Image View Modifiers](#image-view-modifiers)
+  - [Button View modifiers](#button-view-modifiers)
+  - [Safe Area](#safe-area)
+- [State and Bindings](#state-and-bindings)
+  - [State](#state)
+  - [Bindings](#bindings)
+  - [Button and Actions](#button-and-actions)
 
 ## Views and View Modifiers
 ### Review Views
@@ -98,15 +95,17 @@ This results in View1, View2, and View3 being equidistant from each other, with 
 
 One last view to cover today: buttons. Buttons are very self-explanatory--they're views that the user can click on onscreen that will allow an action to occur. We'll talk about actions a little later. For now, the syntax to create a button is:
 ```
-Button ("buttonName") {
-    //action
+Button (action: {
+  //action
+  }) {
+    Text("buttonText")
 }
 ```
-The "buttonName" in the code above will be the text that is printed on the button.
+The "buttonText" in the code above will be the text that is printed on the button.
 
 So... now that we know how to make things show up, how to align said newly-spawned views, and how to space them out all fancy, how do we make them look *pretty*?
 
-### View Modifiers
+### Text View Modifiers
 View modifiers. View modifiers are the answer to making things look pretty. Previously, we discussed that view modifiers tend to follow the format
 ```
 View
@@ -119,21 +118,37 @@ Let's go over some text view modifiers. During session 1, we covered the `.bold(
 
 Some new modifiers pertaining to the Text view are `.tracking()`, `.font()`, and `.lineSpacing()`. These view modifiers will allow you to add spacing between characters, change the font style, and change the line height.
 
+### Image View Modifiers
 Now for images, we've used `.resizable()`, `.frame()`, and `.scaledToFit/Fill()` to make our images the size we want onscreen. Some new view modifiers that might be of interest are `.cornerRadius()`, `.shadow()`, and `.border()`. `.cornerRadius()` rounds the edges of the image to the radius that you specify, shadow creates a drop shadow of your color and size preference, and border creates a border around your image.
 
 Additionally for images, you can use the `.overlay` modifier. `.overlay()` layers another view on top of the view you currently have. For example, if you wanted to create a circular image...
 ```
 Image("DecadentFrenchToast")
-  .overlay(
-    Circle()
-    )
+  .overlay(Circle())
 ```
-you could use overlay to do so. You can also overlay views that are other shapes, such as ellipses, rectangles, capsules, etc.
+you could use overlay to do so. You can also overlay views that are other shapes, such as `Ellipse()`, `Rectange()`, `Capsule()`, etc.
 
 These shapes can have their own view modifiers like `.fill()` and `.stroke()`/`.strokeBorder()`. `.fill()` fills the shape with the color of your choice. `.stroke()` and `.strokeBorder()` add an outline of your specified color and line width to the shape.
 
+### Button View Modifiers
 Next on the view modifiers list, we'll talk about buttons. Buttons are easy to talk about now that we've covered the other views and view modifiers. You can use text view modifiers like `.tracking()`, `.font()`, and`.foregroundColor()` in order to style the buttons's text. `.background()` changes the color of the button itself. You can you image view modifiers like `.cornerRadius()`, `.shadow()`, and `.border()` on buttons as well.
+```
+Button(action: {
+  //action
+  }){
+  Text("Click me")
+    .font(.headline)
+    .bold()
+    .tracking(3)
+    .foregroundColor(Color.white)
+}
+.padding()
+.background(Color.black)
+.cornerRadius(15)
+```
+This code will create a button whose text is styled in the headline font format, is bolded, has letter spacing of 3, and is white. The button itself will have padding (the boundaries of the button will be extended beyond the text itself), it will be black, and have rounded edges with corner radius of 15.
 
+### Safe Area
 One last thing about views and view modifiers: the entire device screen is included in a view--the background view. When you attempt to lay a background image or color for you app to cover the entire screen, you might notice white spaces at the top and bottom of the screen of certain devices like the iPhone 13. The background is cut off by the *safe area* which is the area at the top and bottom of the screen that might have important information on it, like the time and battery level at the top of the iPhone13, that apps might not want to cover. If you have committed, and you want to cover the safe area with your chosen background then here's the view modifier for you:
 ```
 Color(Color.blue)

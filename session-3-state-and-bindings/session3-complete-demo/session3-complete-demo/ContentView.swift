@@ -48,9 +48,9 @@ struct ContentView: View {
                             .padding(.bottom)
                             .accentColor(Color("TamColor"))
                         
-                        Button{
+                        Button(action:{
                             //action
-                        }label: {
+                        }) {
                             Text("FEED")
                                 .font(.title3)
                                 .bold()
