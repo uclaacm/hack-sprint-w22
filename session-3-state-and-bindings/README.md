@@ -30,16 +30,15 @@ Previously, we covered that views are essentially the building blocks that allow
 
 Text displays lines of text to the screen. The syntax is:
 ```
-Text("I really really really love French toast")
+Text("Hi, my name is Shirokuma, and I like hot tea.")
 ```
-This writes the words "I really really really love French toast" to the screen of your app.
+This writes the words "Hi, my name is Shirokuma, and I like hot tea." to the screen of your app. (Shirokuma for those of you who don't know is a Sumikkogurashi character-- a shy polar bear who migrated south to avoid the cold and feels most calm while drinking hot tea in a corner.)
 
 Image places the image of your choice from your *assets* folder onscreen. The syntax is:
 ```
-Image("DecadentFrenchToast")
+Image("ShirokumaAndTea")
 ```
-This will display the image in your assets folder that is named "DecadentFrenchToast" on the screen.
-(Yes, this is absolutely a nod to Nareh's amazing first workshop of this year's Hack Sprint series.)
+This will display the image in your assets folder that is named "ShirokumaAndTea" on the screen.
 
 We have also covered VStack:
 ```
@@ -63,11 +62,11 @@ Now, let's talk about some other common views, starting with **ZStack**--and you
 ZStacks allow you to stack views on top of each other in a pile (stacking up in the z-direction). The first view listed will be at the bottom of the pile, and the last view will be on top of the pile. For example,
 ```
 ZStack {
-  Image("DecadentFrenchToast")
-  Text("I really really really love French toast")
+  Image("ShirokumaAndTea")
+  Text("Hi, my name is Shirokuma, and I like hot tea.")
 }
 ```
-This ZStack will output the text "I really really really love French toast" layered on top of the image "DecadentFrenchToast".
+This ZStack will output the text "Hi, my name is Shirokuma, and I like hot tea." layered on top of the image "ShirokumaAndTea".
 
 Ok. We have aligned our views, but they're so oddly scrunched up on screen. How can we fix this? **Spacers**.
 
@@ -98,10 +97,10 @@ One last view to cover today: buttons. Buttons are very self-explanatory--they'r
 Button (action: {
   //action
   }) {
-    Text("buttonText")
+    Text("Drink Tea")
 }
 ```
-The "buttonText" in the code above will be the text that is printed on the button.
+This creates a button that has the text "Drink Tea" on it.
 
 So... now that we know how to make things show up, how to align said newly-spawned views, and how to space them out all fancy, how do we make them look *pretty*?
 
@@ -119,14 +118,14 @@ Let's go over some text view modifiers. During session 1, we covered the `.bold(
 Some new modifiers pertaining to the Text view are `.tracking()`, `.font()`, and `.lineSpacing()`. These view modifiers will allow you to add spacing between characters, change the font style, and change the line height.
 
 ### Image View Modifiers
-Now for images, we've used `.resizable()`, `.frame()`, and `.scaledToFit/Fill()` to make our images the size we want onscreen. Some new view modifiers that might be of interest are `.cornerRadius()`, `.shadow()`, and `.border()`. `.cornerRadius()` rounds the edges of the image to the radius that you specify, shadow creates a drop shadow of your color and size preference, and border creates a border around your image.
+Now for images, we've used `.resizable()`, `.frame()`, and `.scaledToFit/Fill()` to make our images the size we want onscreen. Some new view modifiers that might be of interest are `.cornerRadius()`, `.shadow()`, and `.border()`. `.cornerRadius()` rounds the edges of the image to the radius that you specify, `.shadow()` creates a drop shadow of your color and size preference, and `.border()` creates a border around your image.
 
-Additionally for images, you can use the `.overlay` modifier. `.overlay()` layers another view on top of the view you currently have. For example, if you wanted to create a circular image...
+Additionally for images, you can use the `.overlay()` modifier. `.overlay()` layers another view on top of the view you currently have. For example, if you wanted to create a circular image...
 ```
-Image("DecadentFrenchToast")
+Image("ShirokumaAndTea")
   .overlay(Circle())
 ```
-you could use overlay to do so. You can also overlay views that are other shapes, such as `Ellipse()`, `Rectange()`, `Capsule()`, etc.
+you could use overlay to do so. You can also overlay views that are other shapes, such as `Ellipse()`, `Rectangle()`, `Capsule()`, etc.
 
 These shapes can have their own view modifiers like `.fill()` and `.stroke()`/`.strokeBorder()`. `.fill()` fills the shape with the color of your choice. `.stroke()` and `.strokeBorder()` add an outline of your specified color and line width to the shape.
 
@@ -135,18 +134,18 @@ Next on the view modifiers list, we'll talk about buttons. Buttons are easy to t
 ```
 Button(action: {
   //action
-  }){
-  Text("Click me")
-    .font(.headline)
-    .bold()
-    .tracking(3)
-    .foregroundColor(Color.white)
+  }) {
+    Text("Drink Tea")
+      .font(.headline)
+      .bold()
+      .tracking(3)
+      .foregroundColor(Color.white)
 }
 .padding()
 .background(Color.black)
 .cornerRadius(15)
 ```
-This code will create a button whose text is styled in the headline font format, is bolded, has letter spacing of 3, and is white. The button itself will have padding (the boundaries of the button will be extended beyond the text itself), it will be black, and have rounded edges with corner radius of 15.
+This code will create a button with text "Drink Me" displayed on it. The text is styled in the headline font format, is bolded, has letter spacing of 3, and is white. The button itself will have padding (the boundaries of the button will be extended beyond the text itself), it will be black, and it will have rounded edges with corner radius of 15.
 
 ### Safe Area
 One last thing about views and view modifiers: the entire device screen is included in a view--the background view. When you attempt to lay a background image or color for you app to cover the entire screen, you might notice white spaces at the top and bottom of the screen of certain devices like the iPhone 13. The background is cut off by the *safe area* which is the area at the top and bottom of the screen that might have important information on it, like the time and battery level at the top of the iPhone13, that apps might not want to cover. If you have committed, and you want to cover the safe area with your chosen background then here's the view modifier for you:
@@ -156,7 +155,7 @@ Color(Color.blue)
 ```
 This code will color the background of your screen blue, extending the coloring into the safe area and covering the entirety of the screen.
 
-To learn more about the view modifiers we have talked about, you can check out the Apple developer docs and look at the demo code to see how they are used.
+To learn more about the view modifiers we have talked about, you can check out the [Apple developer docs](https://developer.apple.com/documentation/swiftui/views-and-controls) and look at the demo code to see how they are used.
 
 ## State and Bindings
 ### State
