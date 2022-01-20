@@ -16,9 +16,10 @@ struct ContentView: View {
                         
                         HStack{
                             Image(systemName: "arrow.counterclockwise")
-                                .imageScale(.large)
+                                .frame(width: 20, height: 20)
                                 .padding()
                                 .background(Circle().fill(Color.white))
+                                .shadow(color: Color.gray, radius: 2, x: 2, y: 2)
                                 .overlay(
                                     Circle()
                                         .strokeBorder(Color("TamColor"), lineWidth: 3)
