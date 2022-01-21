@@ -41,6 +41,9 @@ struct ContentView: View {
                         Image("HappyTam")
                         
                         Text("Health")
+                            .font(.title2)
+                            .bold()
+                            .lineSpacing(22)
                             .padding([.top, .leading, .trailing])
                         
                         ProgressView(value: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/)

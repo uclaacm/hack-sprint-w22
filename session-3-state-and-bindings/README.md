@@ -32,7 +32,7 @@ Text displays lines of text to the screen. The syntax is:
 ```
 Text("Hi, my name is Shirokuma, and I like hot tea.")
 ```
-This writes the words "Hi, my name is Shirokuma, and I like hot tea." to the screen of your app. (Shirokuma for those of you who don't know is a Sumikkogurashi character-- a shy polar bear who migrated south to avoid the cold and feels most calm while drinking hot tea in a corner.)
+This writes the words "Hi, my name is Shirokuma, and I like hot tea." to the screen of your app. (Shirokuma, for those of you who don't know, is a Sumikkogurashi character-- a shy polar bear who migrated south to avoid the cold and feels most calm while drinking hot tea in a corner.)
 
 Image places the image of your choice from your *assets* folder onscreen. The syntax is:
 ```
@@ -130,7 +130,7 @@ you could use overlay to do so. You can also overlay views that are other shapes
 These shapes can have their own view modifiers like `.fill()` and `.stroke()`/`.strokeBorder()`. `.fill()` fills the shape with the color of your choice. `.stroke()` and `.strokeBorder()` add an outline of your specified color and line width to the shape.
 
 ### Button View Modifiers
-Next on the view modifiers list, we'll talk about buttons. Buttons are easy to talk about now that we've covered the other views and view modifiers. You can use text view modifiers like `.tracking()`, `.font()`, and`.foregroundColor()` in order to style the buttons's text. `.background()` changes the color of the button itself. You can you image view modifiers like `.cornerRadius()`, `.shadow()`, and `.border()` on buttons as well.
+Next on the view modifiers list, we'll talk about buttons. Buttons are easy to talk about now that we've covered the other views and view modifiers. You can use text view modifiers like `.tracking()`, `.font()`, and`.foregroundColor()` in order to style the buttons's text. `.background()` changes the color of the button itself. You can use image view modifiers like `.cornerRadius()`, `.shadow()`, and `.border()` on buttons as well.
 ```
 Button(action: {
   //action
@@ -148,7 +148,7 @@ Button(action: {
 This code will create a button with text "Drink Me" displayed on it. The text is styled in the headline font format, is bolded, has letter spacing of 3, and is white. The button itself will have padding (the boundaries of the button will be extended beyond the text itself), it will be black, and it will have rounded edges with corner radius of 15.
 
 ### Safe Area
-One last thing about views and view modifiers: the entire device screen is included in a view--the background view. When you attempt to lay a background image or color for you app to cover the entire screen, you might notice white spaces at the top and bottom of the screen of certain devices like the iPhone 13. The background is cut off by the *safe area* which is the area at the top and bottom of the screen that might have important information on it, like the time and battery level at the top of the iPhone13, that apps might not want to cover. If you have committed, and you want to cover the safe area with your chosen background then here's the view modifier for you:
+One last thing about views and view modifiers: the entire device screen is included in a view--the background view. When you attempt to lay a background image or color for your app to cover the entire screen, you might notice white spaces at the top and bottom of the screen of certain devices like the iPhone 13. The background is cut off by the *safe area* which is the area at the top and bottom of the screen that might have important information on it, like the time and battery level at the top of the iPhone13, that apps might not want to cover. If you have committed, and you want to cover the safe area with your chosen background then here's the view modifier for you:
 ```
 Color(Color.blue)
   .ignoresSafeArea()
