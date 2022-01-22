@@ -11,6 +11,8 @@
 		EB408A182797902A005D8EAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB408A172797902A005D8EAD /* ContentView.swift */; };
 		EB408A1A2797902C005D8EAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB408A192797902C005D8EAD /* Assets.xcassets */; };
 		EB408A1D2797902C005D8EAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB408A1C2797902C005D8EAD /* Preview Assets.xcassets */; };
+		EB486BE2279CA31D00635E22 /* TamImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB486BE1279CA31D00635E22 /* TamImageView.swift */; };
+		EB486BE4279CB09500635E22 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB486BE3279CB09500635E22 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		EB408A172797902A005D8EAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EB408A192797902C005D8EAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB408A1C2797902C005D8EAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EB486BE1279CA31D00635E22 /* TamImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamImageView.swift; sourceTree = "<group>"; };
+		EB486BE3279CB09500635E22 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				EB408A172797902A005D8EAD /* ContentView.swift */,
 				EB408A192797902C005D8EAD /* Assets.xcassets */,
 				EB408A1B2797902C005D8EAD /* Preview Content */,
+				EB486BE1279CA31D00635E22 /* TamImageView.swift */,
+				EB486BE3279CB09500635E22 /* Game.swift */,
 			);
 			path = "session3-complete-demo";
 			sourceTree = "<group>";
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB408A182797902A005D8EAD /* ContentView.swift in Sources */,
+				EB486BE2279CA31D00635E22 /* TamImageView.swift in Sources */,
 				EB408A162797902A005D8EAD /* session3_complete_demoApp.swift in Sources */,
+				EB486BE4279CB09500635E22 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
