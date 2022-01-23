@@ -9,7 +9,7 @@
 ## Resources
 
 - [Slides](http://links.uclaacm.com/hacksprint22-s1-slides)
-- Workshop Recording (Coming Soon!)
+- [Workshop Recording](https://youtu.be/ayzYEj6OZFA)
 
 
 ## What we'll be learning today
