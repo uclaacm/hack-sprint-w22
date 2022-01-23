@@ -8,7 +8,7 @@
 
 ## Resources
 
-- [Slides](http://links.uclaacm.com/hacksprint22-s1-slides)
+- [Slides](http://links.uclaacm.com/hacksprint22-s2-slides)
 - [Workshop Recording](https://youtu.be/ayzYEj6OZFA)
 
 
