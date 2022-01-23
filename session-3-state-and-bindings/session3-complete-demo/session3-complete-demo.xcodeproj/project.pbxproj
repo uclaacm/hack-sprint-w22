@@ -13,6 +13,9 @@
 		EB408A1D2797902C005D8EAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB408A1C2797902C005D8EAD /* Preview Assets.xcassets */; };
 		EB486BE2279CA31D00635E22 /* TamImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB486BE1279CA31D00635E22 /* TamImageView.swift */; };
 		EB486BE4279CB09500635E22 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB486BE3279CB09500635E22 /* Game.swift */; };
+		EB486BE8279CD43000635E22 /* FeedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB486BE7279CD43000635E22 /* FeedButton.swift */; };
+		EB486BEA279CDD4D00635E22 /* RestartImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB486BE9279CDD4D00635E22 /* RestartImageView.swift */; };
+		EBAE9836279CE0E3003CA7DC /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAE9835279CE0E3003CA7DC /* StatsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		EB408A1C2797902C005D8EAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EB486BE1279CA31D00635E22 /* TamImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamImageView.swift; sourceTree = "<group>"; };
 		EB486BE3279CB09500635E22 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		EB486BE7279CD43000635E22 /* FeedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedButton.swift; sourceTree = "<group>"; };
+		EB486BE9279CDD4D00635E22 /* RestartImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartImageView.swift; sourceTree = "<group>"; };
+		EBAE9835279CE0E3003CA7DC /* StatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +61,10 @@
 		EB408A142797902A005D8EAD /* session3-complete-demo */ = {
 			isa = PBXGroup;
 			children = (
-				EB408A152797902A005D8EAD /* session3_complete_demoApp.swift */,
-				EB408A172797902A005D8EAD /* ContentView.swift */,
-				EB408A192797902C005D8EAD /* Assets.xcassets */,
+				EBAE9838279CE3BC003CA7DC /* App */,
+				EBAE9837279CE39B003CA7DC /* Views */,
+				EBAE9839279CE3C2003CA7DC /* Model */,
 				EB408A1B2797902C005D8EAD /* Preview Content */,
-				EB486BE1279CA31D00635E22 /* TamImageView.swift */,
-				EB486BE3279CB09500635E22 /* Game.swift */,
 			);
 			path = "session3-complete-demo";
 			sourceTree = "<group>";
@@ -71,6 +75,35 @@
 				EB408A1C2797902C005D8EAD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EBAE9837279CE39B003CA7DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EB408A172797902A005D8EAD /* ContentView.swift */,
+				EB486BE1279CA31D00635E22 /* TamImageView.swift */,
+				EB486BE7279CD43000635E22 /* FeedButton.swift */,
+				EB486BE9279CDD4D00635E22 /* RestartImageView.swift */,
+				EBAE9835279CE0E3003CA7DC /* StatsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EBAE9838279CE3BC003CA7DC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EB408A152797902A005D8EAD /* session3_complete_demoApp.swift */,
+				EB408A192797902C005D8EAD /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EBAE9839279CE3C2003CA7DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB486BE3279CB09500635E22 /* Game.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +177,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB408A182797902A005D8EAD /* ContentView.swift in Sources */,
+				EB486BE8279CD43000635E22 /* FeedButton.swift in Sources */,
+				EB486BEA279CDD4D00635E22 /* RestartImageView.swift in Sources */,
 				EB486BE2279CA31D00635E22 /* TamImageView.swift in Sources */,
 				EB408A162797902A005D8EAD /* session3_complete_demoApp.swift in Sources */,
+				EBAE9836279CE0E3003CA7DC /* StatsView.swift in Sources */,
 				EB486BE4279CB09500635E22 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct TamImageView: View {
-  @Binding var health: Double
-  var imageToDisplay: String {
+  var health: Double
+  
+  var body: some View {
+    Image(chooseImage())
+  }
+  
+  func chooseImage() -> String {
     if health >= 50.0 {
       return "HappyTam"
     } else if health <= 0.0 {
@@ -18,14 +23,10 @@ struct TamImageView: View {
       return "SadTam"
     }
   }
-  
-  var body: some View {
-    Image(imageToDisplay)
-  }
 }
 
 struct TamImageView_Previews: PreviewProvider {
   static var previews: some View {
-    TamImageView(health: .constant(50.0))
+    TamImageView(health: 50.0)
   }
 }
