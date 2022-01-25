@@ -12,10 +12,10 @@ We hope all of you have a great time learning this quarter! Feel free to reach o
 
 ## Curriculum Overview
 
-- Session 1: Intro to Swift
-- Session 2: Swift Fundamentals
-- Session 3: State and Bindings
-- Session 4: Advanced Views
+- [Session 1: Intro to Swift](https://github.com/uclaacm/hack-sprint-w22/tree/main/session-1-intro-to-swift)
+- [Session 2: Swift Fundamentals](https://github.com/uclaacm/hack-sprint-w22/tree/main/session-2-swift-fundamentals)
+- [Session 3: State and Bindings](https://github.com/uclaacm/hack-sprint-w22/tree/main/session-3-state-and-bindings)
+- [Session 4: Advanced Views](https://github.com/uclaacm/hack-sprint-w22/tree/main/session-4-advanced-views)
 - Session 5: Data and Networking
 - Session 6: Guest Speaker + Work Session
 - Session 7: Guest Speaker + Work Session
