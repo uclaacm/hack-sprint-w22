@@ -41,15 +41,6 @@ struct StatsView: View {
         }
     }
   }
-  
-  func updateHealth() {
-    if game.isRunning {
-      game.health -= min(dyingRate, game.health)
-    }
-    if game.health == 0 {
-      game.isRunning = false
-    }
-  }
 }
 
 struct StatsView_Previews: PreviewProvider {
