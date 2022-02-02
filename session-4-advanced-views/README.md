@@ -2,7 +2,7 @@
 
 **Date**: Feburary 2, 2022
 
-**Location**: TBD
+**Location**: Zoom
 
 **Teachers**: [Nareh Agazaryan](https://github.com/nareha), [James Wu](https://github.com/jamesmwu)
 
