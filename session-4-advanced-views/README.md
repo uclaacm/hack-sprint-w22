@@ -169,5 +169,4 @@ ViewModel may be thought of as the link between the Model and the View. Implemen
 
 We may see some more robust use cases in future workshops!
 
-
-Some of the demo specific content has been omitted for the slides. Please feel free to reference them for more applications!
+Please reference the demo folder for this session for an example of this code structure!
