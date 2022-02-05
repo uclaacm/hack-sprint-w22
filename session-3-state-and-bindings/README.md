@@ -11,7 +11,7 @@ Hello, and welcome to session 3's README! If you're here for the solutions to th
 ## Resources
 
 - [Slides](https://docs.google.com/presentation/d/1kO9elgFystbMWY24HPOouiGw71A2-PFp7uG9zgpywNA/edit?usp=sharing)
-- Workshop recording (coming soon)
+- [Workshop Recording](https://youtu.be/qlHPOjy2lBs)
 
 ## What we'll be learning today
 
