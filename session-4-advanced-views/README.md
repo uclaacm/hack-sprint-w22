@@ -9,7 +9,7 @@
 ## Resources
 
 - [Slides](http://links.uclaacm.com/hacksprint22-s4-slides)
-- Workshop Recording (Coming Soon!)
+- [Workshop Recording](https://youtu.be/s_MPo0ISL-4)
 
 ## What we'll be learning today
 - [Arrays and Lists](#arrays-and-lists)
