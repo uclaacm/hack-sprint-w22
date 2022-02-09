@@ -20,15 +20,9 @@ class DogPicViewModel: ObservableObject {
         if let response = try? JSONDecoder().decode(Response.self, from: data) {
           self.dogImageList.append(response.message)
         }
-        
       }
     }
     dataTask?.resume()
-  }
-  
-  struct Response: Decodable {
-    var message : String
-    var status : String
   }
 }
 
