@@ -46,5 +46,6 @@ I know, another acronym. Don't worry, we're here to help you break it down. JSON
 A key value pair in a JSON takes on the form of `"key" : value`. The key has to be a String (something like "eric" or "abc"), but the value can take on many types. This is sort of similar to a map or dictionary if you have worked with any of those. 
 
 ## AsyncImage
+AsyncImage is a new view introduced in iOS 15 that helps load images asynchronously using a URL. "Asynchronous" is probably a word you will hear/have heard thrown around a bunch. Essentially what it means is that the code loading the photo will not get in the way of the other code running. This is useful since we don't want the app to freeze/look blank while we are trying to load an image from a URL. We can pass in a URL to AsyncImage and also choose a placeholder.
 
 Thanks for coming!
